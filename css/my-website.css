@@ -1,9 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Sans+Pro&display=swap');
+/* reset css (tirar as bordas automáticas): */
+* {
+  color: whitesmoke;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  background-color: #191919;
+  background-image: url(../img/background.jpg);
+  background-size: auto 100vh; /* tamanho da imagem: 100% da altura do visor, largura automatica */
   font-family: 'Open Sans', arial;
   height: 100vh;
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+.menu {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100vw;
 }
 
 .menu ul {
@@ -15,7 +37,13 @@ body {
   list-style: none;
 }
 
+.menu a {
+  display: block;
+  padding: 5px 20px;
+}
+
 a {
+  color: rgb(0, 137, 250);
   text-decoration: none;
 }
 
@@ -25,6 +53,10 @@ a:hover {
 
 .site-title,
 .site-subtitle {
-  color: whitesmoke;
   text-align: center;
+}
+
+.img-portfolio {
+  height: auto;
+  width: 300px;
 }
