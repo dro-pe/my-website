@@ -9,7 +9,7 @@
 
 body {
   background-image: url(../img/background.jpg);
-  background-size: auto 100vh; /* tamanho da imagem: 100% da altura do visor, largura automatica */
+  background-size: 100vw 100vh; /* tamanho da imagem: 100% da largura e da altura do visor */
   font-family: 'Open Sans', arial;
   font-size: 11px;
   height: 100vh;
@@ -28,6 +28,7 @@ body {
 }
 
 header {
+  background-image: url(../img/hacks.gif);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -57,12 +58,12 @@ header {
 }
 
 .menu a {
+  color: rgb(20, 173, 0);
   display: block;
   padding: 5px 20px;
 }
 
 a {
-  color: rgb(0, 137, 250);
   text-decoration: none;
 }
 
