@@ -1,30 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 /* reset css (tirar as margens e padding automáticos): */
 * {
+  box-sizing: border-box;
   color: whitesmoke;
+  font-family: 'Mukta', arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
   background-image: url(../img/background.jpg);
   background-size: 100vw 100vh; /* tamanho da imagem: 100% da largura e da altura do visor */
-  font-family: 'Open Sans', arial;
-  font-size: 11px;
+  font-size: 14px;
   height: 100vh;
-}
-
-@media (min-width: 400px) {
-  body {
-    font-size: 14px;
-  }
-}
-
-@media (min-width: 600px) {
-  body {
-    font-size: 18px;
-  }
 }
 
 header {
@@ -35,10 +25,26 @@ header {
   align-items: center;
 } 
 
-@media (min-width: 400px) {
-  header {
-    height: 70vh;
+@media (min-width: 450px) {
+  body {
+    font-size: 16px;
   }
+
+  header {
+    height: 80vh;
+  }
+}
+
+@media (min-width: 600px) {
+  body {
+    font-size: 19px;
+  }
+}
+
+h2 {
+  font-family: 'VT323', monospace;
+  font-size: 2.3em;
+  text-transform: uppercase;
 }
 
 .menu {
@@ -77,10 +83,49 @@ a:hover {
 }
 
 .site-title {
-  font-size: 2.2em;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.7em;
 }
 
-.img-portfolio {
-  height: auto;
-  width: 300px;
+.projetos {
+  height: calc(100vh - 20px);
+  padding: 1.8em;
+}
+
+.projetos h2 {
+  margin-bottom: .6em;
+}
+
+.grid {
+  display: grid;
+  gap: 2em;
+  align-content: center;
+  justify-content: center;
+  
+  /* background-color: tomato; */
+}
+
+@media (min-width: 560px) {
+  .grid {
+    grid-template-columns: 240px 240px;
+  }
+}
+
+@media (min-width: 840px) {
+  .grid {
+    grid-template-columns: repeat(3, 240px);
+    height: calc(100vh - 8em - 20px)
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, 240px);
+  }
+}
+
+.img-projetos {
+  height: 210px;
+  width: 240px;
+  object-fit: cover;
 }
