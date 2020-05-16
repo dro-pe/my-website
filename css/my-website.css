@@ -11,8 +11,6 @@
 }
 
 body {
-  background-image: url(../img/background.jpg);
-  background-size: auto 100vh;
   font-size: 14px;
   height: 100vh;
 }
@@ -47,11 +45,16 @@ h2 {
   text-transform: uppercase;
 }
 
+a {
+  text-decoration: none;
+}
+
 .menu {
   background-color: white;
   position: fixed;
   top: 0;
   width: 100vw;
+  z-index: 1;
 }
 
 .menu ul {
@@ -69,14 +72,11 @@ h2 {
   padding: 5px 20px;
 }
 
-a {
-  text-decoration: none;
-}
-
-a:hover {
+.menu a:hover {
   text-decoration: underline;
 }
 
+.icons,
 .site-title,
 .site-subtitle {
   text-align: center;
@@ -88,39 +88,34 @@ a:hover {
 }
 
 .projetos {
-  height: calc(100vh - 20px);
-  padding: 1.8em;
+  background-image: url(../img/background.jpg);
+  background-size: 100vw auto;
+  min-height: calc(100vh - 20px);
+  padding: 1.8em
 }
 
 .projetos h2 {
   margin-bottom: .6em;
 }
 
-.grid {
+.projetos .grid {
   display: grid;
   gap: 2em;
   align-content: center;
   justify-content: center;
-  
-  /* background-color: tomato; */
+  min-height: calc(100vh - 3.6em - 20px);
 }
 
 @media (min-width: 560px) {
-  .grid {
+  .projetos .grid {
     grid-template-columns: 240px 240px;
   }
 }
 
 @media (min-width: 840px) {
-  .grid {
+  .projetos .grid {
     grid-template-columns: repeat(3, 240px);
     height: calc(100vh - 8em - 20px)
-  }
-}
-
-@media (min-width: 1200px) {
-  .grid {
-    grid-template-columns: repeat(4, 240px);
   }
 }
 
@@ -128,4 +123,27 @@ a:hover {
   height: 210px;
   width: 240px;
   object-fit: cover;
+  transition: transform 150ms;
+}
+
+.img-projetos:hover {
+  transform: scale(1.06)
+}
+
+.contato {
+  background-image: url(../img/background.jpg);
+  background-size: auto 100vh;
+  min-height: 34vh;
+  padding: 1.8em;
+}
+
+.contato a {
+  font-family: monospace;
+  font-size: 4.3em;
+  transition: opacity 200ms;
+}
+
+.contato a:active,
+.contato a:hover {
+  opacity: .75;
 }
