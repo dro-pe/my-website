@@ -11,6 +11,8 @@
 }
 
 body {
+  background-image: url(../img/background.jpg);
+  background-size: auto 100vh;
   font-size: 14px;
   height: 100vh;
 }
@@ -87,13 +89,26 @@ a {
   font-size: 2.7em;
 }
 
+.sobre,
 .projetos {
-  background-image: url(../img/background.jpg);
-  background-size: 100vw auto;
   min-height: calc(100vh - 20px);
-  padding: 1.8em
+  padding: 1.8em;
 }
 
+@media (min-width: 400px) {
+  .sobre .avatar {
+    float: right;
+    margin-left: 1.5em;
+  }
+}
+
+.img-projetos {
+  height: 50px;
+  width: 50px;
+}
+
+.sobre h2,
+.contato h2,
 .projetos h2 {
   margin-bottom: .6em;
 }
@@ -119,20 +134,55 @@ a {
   }
 }
 
-.img-projetos {
-  height: 210px;
-  width: 240px;
-  object-fit: cover;
-  transition: transform 150ms;
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-.img-projetos:hover {
-  transform: scale(1.06)
+.img-projetos {
+  height: 210px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.flip-card {
+  perspective: 500px;
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.flip-card:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  backface-visibility: hidden;
+  left: 0;
+  position: absolute;
+  top: 0;
+} 
+
+.card-back {
+  background-color: rgb(35, 46, 66);
+  height: 210px;
+  width: 100%;
+  transform: rotateY(180deg)
+}
+.sobre .avatar img {
+  height: 14em;
+  width: 14em;
+  border-radius: 5%;
 }
 
 .contato {
-  background-image: url(../img/background.jpg);
-  background-size: auto 100vh;
   min-height: 34vh;
   padding: 1.8em;
 }
