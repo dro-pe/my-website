@@ -1,1 +1,1 @@
-dro-pe.github.io/my-website (about me, my resume etc.)
+dro-pe.github.io/my-website (about me etc.)
