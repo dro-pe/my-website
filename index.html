@@ -11,7 +11,7 @@
 <body>
     <header>
         <nav class="menu">
-            <ul>
+            <ul class="container">
                 <li><a href="#sobre">Sobre mim</a></li>
                 <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#contato">Contato</a></li>
@@ -24,30 +24,73 @@
         </div>
         
     </header>
-    <section class="projetos" id="projetos">
+    <section class="sobre container" id="sobre">
+        <h2>Sobre mim</h2>
+
+        <figure class="avatar">
+            <img src="https://pbs.twimg.com/profile_images/1211774511194005504/hs1knxJ-_400x400.jpg" alt="Pedro Folloni Pesserl">
+        </figure>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed minus laborum, quidem mollitia sapiente consequuntur vel fuga eum doloremque voluptates error expedita dolor harum architecto asperiores vitae qui, pariatur inventore!
+        </p>
+    </section>
+    <section class="projetos container" id="projetos">
         <h2>Projetos</h2>
 
         <div class="grid">
-            <figure>
-                <img class="img-projetos" src="./img/ecommerce.jpg" alt="eCommerce">
-                <figcaption>eCommerce</figcaption>
-            </figure>
-            <figure>
-                <img class="img-projetos" src="./img/mobile.jpg" alt="Mobile">
-                <figcaption>Mobile</figcaption>
-            </figure>
-            <figure>
-                <img class="img-projetos" src="./img/web-design.jpg" alt="Web design">
-                <figcaption>Web design</figcaption>
-            </figure>
-            <figure>
-                <img class="img-projetos" src="./img/hackermans.jpg" alt="Projetos pessoais">
-                <figcaption>Projetos pessoais</figcaption>
-            </figure>
+
+            <div class="flip-card">
+                <div class="card">
+                    <figure class="card-front">
+                        <img class="img-projetos" src="./img/ecommerce.jpg" alt="eCommerce">
+                        <figcaption>eCommerce</figcaption>
+                    </figure>
+                    <div class="card-back">
+                        parte de tras do ecommerce
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="card">
+                    <figure class="card-front">
+                        <img class="img-projetos" src="./img/mobile.jpg" alt="Mobile">
+                        <figcaption>Mobile</figcaption>
+                    </figure>
+                    <div class="card-back">
+                        parte de tras do mobile
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="card">
+                    <figure class="card-front">
+                        <img class="img-projetos" src="./img/web-design.jpg" alt="Web design">
+                        <figcaption>Web design</figcaption>
+                    </figure>
+                    <div class="card-back">
+                        parte de tras do web
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="card">
+                    <figure class="card-front">
+                        <img class="img-projetos" src="./img/hackermans.jpg" alt="Projetos pessoais">
+                        <figcaption>Projetos pessoais</figcaption>
+                    </figure>
+                    <div class="card-back">
+                        parte de tras do projetos
+                    </div>
+                </div>
+            </div>
         </div>
-        
+
     </section>
-    <section class="contato" id="contato">
+    <section class="contato container" id="contato">
         <h2>Contato</h2>
 
         <div class ="grid icons">
