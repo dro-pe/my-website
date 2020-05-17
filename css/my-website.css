@@ -33,11 +33,10 @@ header {
   header {
     height: 80vh;
   }
-}
 
-@media (min-width: 600px) {
-  body {
-    font-size: 19px;
+  .sobre .avatar {
+    float: right;
+    margin-left: 1.5em;
   }
 }
 
@@ -91,15 +90,12 @@ a {
 
 .sobre,
 .projetos {
-  min-height: calc(100vh - 20px);
+  min-height: calc(70vh - 20px);
   padding: 1.8em;
 }
 
-@media (min-width: 400px) {
-  .sobre .avatar {
-    float: right;
-    margin-left: 1.5em;
-  }
+.sobre p {
+  text-align: justify;
 }
 
 .img-projetos {
@@ -115,22 +111,28 @@ a {
 
 .projetos .grid {
   display: grid;
-  gap: 2em;
-  align-content: center;
+  gap: 2.5em;
+  grid-template-columns: 240px;
+  min-height: calc(50vh - 3.6em - 20px);
   justify-content: center;
-  min-height: calc(100vh - 3.6em - 20px);
 }
 
-@media (min-width: 560px) {
+@media (min-width: 630px) {
+  body {
+    font-size: 19px;
+  }
+
   .projetos .grid {
     grid-template-columns: 240px 240px;
   }
 }
 
-@media (min-width: 840px) {
+@media (min-width: 900px) {
   .projetos .grid {
     grid-template-columns: repeat(3, 240px);
-    height: calc(100vh - 8em - 20px)
+    align-content: center;
+    justify-content: center;
+    height: calc(70vh - 8em - 20px)
   }
 }
 
@@ -139,6 +141,11 @@ a {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+  }
+  
+  .projetos .grid {
+    grid-template-columns: repeat(4, 240px);
+    height: calc(10vh - 8em - 20px)
   }
 }
 
@@ -149,13 +156,16 @@ a {
 }
 
 .flip-card {
+  justify-content: center;
+  height: 210px;
+  max-width: 240px;
   perspective: 500px;
 }
 
 .card {
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 1s;
+  transition: transform .8s;
 }
 
 .flip-card:hover .card {
@@ -176,6 +186,7 @@ a {
   width: 100%;
   transform: rotateY(180deg)
 }
+
 .sobre .avatar img {
   height: 14em;
   width: 14em;
