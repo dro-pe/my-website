@@ -132,7 +132,7 @@ a {
     grid-template-columns: repeat(3, 240px);
     align-content: center;
     justify-content: center;
-    height: calc(70vh - 8em - 20px)
+    min-height: calc(70vh - 8em - 20px)
   }
 }
 
@@ -145,7 +145,7 @@ a {
   
   .projetos .grid {
     grid-template-columns: repeat(4, 240px);
-    height: calc(10vh - 8em - 20px)
+    min-ght: calc(10vh - 8em - 20px)
   }
 }
 
