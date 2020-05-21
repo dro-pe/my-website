@@ -11,8 +11,7 @@
 }
 
 body {
-  background-image: url(../img/background.jpg);
-  background-size: auto 100vh;
+  background-color: rgb(31, 22, 66);
   font-size: 14px;
   height: 100vh;
 }
@@ -68,13 +67,17 @@ a {
 }
 
 .menu a {
-  color: rgb(20, 173, 0);
+  color: rgba(18, 50, 153, 0.83);
   display: block;
-  padding: 5px 20px;
+  padding: 5px 10px;
 }
 
 .menu a:hover {
   text-decoration: underline;
+}
+
+.menu i {
+  color: rgba(18, 50, 153, 0.83);
 }
 
 .icons,
@@ -96,11 +99,6 @@ a {
 
 .sobre p {
   text-align: justify;
-}
-
-.img-projetos {
-  height: 50px;
-  width: 50px;
 }
 
 .sobre h2,
@@ -142,14 +140,10 @@ a {
     margin-left: auto;
     margin-right: auto;
   }
-  
-  .projetos .grid {
-    grid-template-columns: repeat(4, 240px);
-    min-ght: calc(10vh - 8em - 20px)
-  }
 }
 
 .img-projetos {
+  border-radius: 4px;
   height: 210px;
   width: 100%;
   object-fit: cover;
@@ -181,9 +175,15 @@ a {
 } 
 
 .card-back {
-  background-color: rgb(35, 46, 66);
+  background-color: rgba(159, 17, 202, 0.986);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
   height: 210px;
   width: 100%;
+  line-height: 120%;
+  padding: 1em;
+  text-align: center;
   transform: rotateY(180deg)
 }
 
